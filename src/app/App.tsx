@@ -8,7 +8,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Текст писать тут
+            <ul>
+                <oi>O себе: Меня зовут Евгений, 3 года бекенд разработки + немного react </oi>
+                <oi>Цели: Научиться немного в React с различными красивостями </oi>
+                <oi>Немного умею в Django, celery, redis, python, docker, ci/cd, ansible, ну и кучка сетевых технологий</oi>
+            </ul>
         </p>
       </header>
     </div>
