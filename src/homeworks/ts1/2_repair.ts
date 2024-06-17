@@ -49,3 +49,4 @@ const getDataAmount = (data: Data): number => {
         }
     }
 };
+``

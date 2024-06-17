@@ -20,7 +20,7 @@ export const getBeautifulNumber = (value: number | null, separator: string = ' '
 //   const d = 10 ** accuracy;
 //   return Math.round(value * d) / d;
 // };
-export const round = (value: number, accuracy: number = 2): number => {
+export const round = (value: number, accuracy = 2): number => {
   const d = 10 ** accuracy;
   return Math.round(value * d) / d;
 };
@@ -114,7 +114,14 @@ export const toStringArray = <T>(arr: { value: string; number: number }[]): stri
 //   }, {});
 // };
 
-export const transformCustomers = (customers: { id: number; name: string; age: number; isSubscribed: boolean }[]): Record<number, { name: string; age: number; isSubscribed: boolean }> => {
+type Customer={
+  id: number,
+  name: string,
+  age: number,
+  isSubscribed: boolean
+}
+
+export const transformCustomers = (customers: Customer[]): Record<number, { name: string; age: number; isSubscribed: boolean }> => {
   return customers.reduce((acc, customer) => {
     acc[customer.id] = { name: customer.name, age: customer.age, isSubscribed: customer.isSubscribed };
     return acc;
